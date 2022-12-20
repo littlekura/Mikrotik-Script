@@ -1,8 +1,8 @@
-:local myserver ([/system identity get name]) << NAMA MIKROTIK MU
-:local scheduleName "LogFilter" << SESUAIKAN SAMA NAMA DI SCHEDULE YANG DIBIKIN
-:local bot "BOT ID" << BOT ID
-:local ChatID "GRUPBOT ID" << ID BOT / GRUP BOT 
-:local startBuf [:toarray [/log find message~"login failure"|| message~"logged in"]] << BUAT CHECK DATA LOG YANG MASUK,TINGGAL SESUAIKAN
+:local myserver ([/system identity get name])
+:local scheduleName "LogFilter"
+:local bot "BOT ID" 
+:local ChatID "GRUPBOT ID" 
+:local startBuf [:toarray [/log find message~"login failure"|| message~"logged in"]]
 :local removeThese {"ftp"}
 # :local removeThese [:toarray ""]
 
