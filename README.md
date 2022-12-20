@@ -1,5 +1,9 @@
 # Mikrotik-Script-Monitoring LOG
 
+## Link Script
+[Monitoring Log](https://linktodocumentation)
+
+
 ## Server
 ```bash
  :local myserver ([/system identity get name]) 
