@@ -10,16 +10,16 @@
 :global mesnum
 :local date [/system clock get date]
 
-# warn if schedule does not exist and create it
+# Buat Schedule Jika tidak ada
 :if ([:len [/system scheduler find name="$scheduleName"]] = 0) do={
     /log warning "[LogFilter] Alert : Schedule does not exist. Creating schedule ...."
     /system scheduler add name=$scheduleName interval=60s start-date=dec/12/2022 start-time=12:00:00 on-event=LogFilter
     /log warning "[LogFilter] Alert : Schedule created!"
 }
 
-# get last time from scheduler's comment
+# Lastime Schedule Berjalan
 :local lastTime [/system scheduler get [find name="$scheduleName"] comment]
-# for checking time of each log entry
+# Check Waktu setiap log
 :local currentTime
 # log message
 :local message
